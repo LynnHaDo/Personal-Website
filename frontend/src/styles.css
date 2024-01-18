@@ -1,0 +1,35 @@
+:root {
+    --header-font-family: 'Dela Gothic One', sans-serif;
+    --main-font-family: 'DM Mono', monospace; 
+    --header-font-weight: 500;
+    --text-font-weight: 400;
+    --white: #F2F2F2;
+    --black: #0D0D0D;
+    --pink: #F299E3;
+    --green-light: #04D960;
+    --green-mid: #04BF55;
+    --green-dark: #027333;
+}
+
+html {
+    background-color: var(--white);
+}
+
+h1, h2, h3 {
+    font-family: var(--header-font-family);
+}
+
+h4, h5, h6 {
+    font-family: var(--main-font-family);
+    font-weight: var(--header-font-weight);
+}
+
+p, button, a {
+    font-family: var(--main-font-family);
+    font-weight: var(--main-font-weight);
+}
+
+a {
+    text-decoration: none;
+    color: var(--green-mid)
+}
