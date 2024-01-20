@@ -13,6 +13,11 @@
 
 html {
     background-color: var(--white);
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
 }
 
 h1, h2, h3 {
@@ -31,5 +36,43 @@ p, button, a {
 
 a {
     text-decoration: none;
-    color: var(--green-mid)
+    color: var(--black)
+}
+
+a:hover {
+    color: var(--green-mid);
+    transition: 0.5s ease;
+}
+
+.bg-green {
+    background-color: var(--green-dark);
+}
+
+.bg-black {
+    background-color: var(--black);
+}
+
+.bg-black * {
+    color: var(--white)
+}
+/* Source: https://codepen.io/sosuke/pen/Pjoqqp */
+.filter-white {
+    filter: invert(99%) sepia(42%) saturate(43%) hue-rotate(151deg) brightness(118%) contrast(90%);
+}
+
+/* Main Section */
+section.main-section {
+    padding: 2rem 20%;
+    height: 100vh;
+}
+.intro {
+    text-align: center;
+}
+
+.intro img.logo {
+    width: 100px;
+}
+
+section.main-section#contact {
+    height: 300px;
 }

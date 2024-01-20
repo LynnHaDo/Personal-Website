@@ -1,0 +1,67 @@
+.wrapper > .menus a:hover,
+.wrapper > .menus a:active,
+.expand.active,
+.menus > li.current > a {
+    color: var(--green-mid);
+}
+
+header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 30px;
+}
+
+header a {
+    margin-left: 30px;
+}
+
+header a:hover {
+    color: var()
+}
+
+.wrapper {
+    padding: 20px;
+}
+
+.menus {
+    position: fixed;
+    top: 35%;
+    left: 30px;
+    width: 70px;
+    height: 180px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background-color: #fff;
+    --shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    list-style-type: none;
+    margin: 0;
+    padding: 20px 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.wrapper > .menus a {
+    position: relative;
+}
+.wrapper > .menus a::after {
+    position: absolute;
+    left: 50px;
+    top: -7px;
+    margin-left: 14px;
+    content: attr(alt);
+    font-size: 1rem;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.wrapper > .menus a:hover::after{
+    opacity: 1
+}
+
+.wrapper > .menus > li {
+    text-align: center;
+    padding-top: 5px;
+}
