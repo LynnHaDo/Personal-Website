@@ -1,63 +1,80 @@
-.wrapper > .menus a:hover,
-.wrapper > .menus a:active,
-.expand.active,
-.menus > li.current > a {
-    color: var(--green-mid);
-}
-
 header {
-    height: 40px;
+    height: 60px;
+    padding: 30px;
     display: flex;
     align-items: center;
-    justify-content: right;
-    padding: 30px;
+    justify-content: space-between;
+    position: relative;
 }
 
-header a {
+header .logo {
+    width: 50px;
+    order: 1;
+}
+
+header .connect {
+    position: absolute;
+    right: 30px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+header a, header button {
     margin-left: 30px;
 }
 
-header a:hover {
-    color: var()
-}
-
-.wrapper {
-    padding: 20px;
+header button#nightDayToggle {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
 }
 
 .menus {
     position: fixed;
-    top: 35%;
-    left: 30px;
-    width: 70px;
-    height: 180px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 25px;
-    background-color: #fff;
-    --shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    bottom: 30px;
+    left: calc(50vw - 110px);
+    width: 180px;
+    height: 35px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
     list-style-type: none;
     margin: 0;
-    padding: 20px 5px;
+    padding: 10px 5px;
     display: flex;
     justify-content: space-around;
-    flex-direction: column;
+    /**flex-direction: column;*/
+    z-index: 2000;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.14);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px);
 }
 .wrapper > .menus a {
     position: relative;
 }
-.wrapper > .menus a::after {
+.wrapper > .menus li a::after {
     position: absolute;
-    left: 50px;
-    top: -7px;
-    margin-left: 14px;
+    left: -23px;
+    top: -50px;
     content: attr(alt);
     font-size: 1rem;
     opacity: 0;
     transition: 0.3s ease;
 }
 
-.wrapper > .menus a:hover::after{
+.wrapper > .menus li:first-child a::after {
+    left: -10px!important;
+}
+
+.wrapper > .menus li:last-child a::after {
+    left: -15px!important;
+}
+
+.wrapper > .menus li:hover a::after{
     opacity: 1
 }
 

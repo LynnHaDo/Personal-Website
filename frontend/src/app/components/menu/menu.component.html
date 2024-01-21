@@ -1,5 +1,9 @@
-<header>
+<header id = "header-wrapper">
     <div class = "connect">
+        <button id = "nightDayToggle" (click)="handleNightDayClick()">
+            <img *ngIf = "isDayToggle" src="../../../assets/icons/moon.svg">
+            <img *ngIf = "!isDayToggle" src="../../../assets/icons/sun.svg">
+        </button>
         <a  href = "https://drive.google.com/file/d/10CqG6FMyzOzAVt5XWzdDu9MJFKH6nYOj/view?usp=sharing"
             target="_blank">Resume</a>
         <a  href = "https://github.com/LynnHaDo" 
@@ -8,14 +12,14 @@
 </header>
 <div class="wrapper">
     <ul class="menus">
-        <li><a href="#home" alt="Home">
-            <img src="../../../assets/icons/home.svg" />
+        <li><a href="#about" alt="About">
+            <img src="../../../assets/icons/user.svg" />
         </a></li>
         <li><a href="#projects" alt="Projects">
             <img src="../../../assets/icons/code.svg" />
         </a></li>
         <li><a href="#contact" alt="Contact">
-            <img src="../../../assets/icons/mail.svg" />
+            <img src="../../../assets/icons/send.svg" />
         </a></li>
     </ul>
 </div>

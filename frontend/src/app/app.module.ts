@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MainComponent } from './components/main/main.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { MenuService } from './services/menu.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [MenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
