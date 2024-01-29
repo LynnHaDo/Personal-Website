@@ -8,13 +8,15 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MainComponent } from './components/main/main.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { MenuService } from './services/menu.service';
+import { ProjectListComponent } from './components/project-list/project-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     MainComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ProjectListComponent
   ],
   imports: [
     BrowserModule,

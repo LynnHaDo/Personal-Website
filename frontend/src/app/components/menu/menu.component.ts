@@ -9,19 +9,8 @@ import { MenuService } from 'src/app/services/menu.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-    isDayToggle!: boolean;
-    storage: Storage = sessionStorage;
 
-    constructor(@Inject(DOCUMENT) private document: Document, public menuService: MenuService){}
+    constructor(@Inject(DOCUMENT) private document: Document){}
 
-    ngOnInit(): void {
-        this.isDayToggle = this.menuService.isDayToggle.getValue();   
-    }
-
-    handleNightDayClick(){
-        this.menuService.toggleNightDayState();
-        this.menuService.changeNightDayTheme();
-        this.isDayToggle = this.menuService.isDayToggle.getValue();   
-    }
-
+    ngOnInit(): void {}
 }

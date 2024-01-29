@@ -11,31 +11,31 @@ export class MenuService {
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
   changeNightDayTheme() {
-    const mainSections = this.document.querySelectorAll(".main-section");
-    const header = this.document.getElementById("header-wrapper");
+    const document = this.document.getElementsByTagName("html");
     const navItems = this.document.querySelectorAll(".menus li");
+    const socialMediaIcons = this.document.querySelectorAll(".social-media a img")
     if (this.storage.getItem("dayMode") == "true") {
-      mainSections.forEach((el) => {
-        if (el.classList.contains("night-theme")) {
-          el.classList.remove("night-theme");
-        }
-      });
+      if (document[0].classList.contains("night-theme")) {
+        document[0].classList.remove("night-theme");
+      }
       navItems.forEach((el) => {
         if (el.classList.contains("filter-white")) {
           el.classList.remove("filter-white");
         }
       });
-      if (header!.classList.contains("night-theme")) {
-        header!.classList.remove("night-theme");
-      }
+      socialMediaIcons.forEach((el) => {
+        if (el.classList.contains("filter-white")){
+            el.classList.remove("filter-white")
+        }
+      })
     } else {
-      mainSections.forEach((el) => {
-        el.classList.add("night-theme");
-      });
+      document[0].classList.add("night-theme");
       navItems.forEach((el) => {
         el.classList.add("filter-white");
       });
-      header!.classList.add("night-theme");
+      socialMediaIcons.forEach((el) => {
+        el.classList.add("filter-white")
+      })
     }
   }
 
@@ -49,3 +49,19 @@ export class MenuService {
     }
   }
 }
+
+/**
+ *       mainSections.forEach((el) => {
+        if (el.classList.contains("night-theme")) {
+          el.classList.remove("night-theme");
+        }
+      });
+
+            if (header!.classList.contains("night-theme")) {
+        header!.classList.remove("night-theme");
+      }
+       mainSections.forEach((el) => {
+        el.classList.add("night-theme");
+      });
+            header!.classList.add("night-theme");
+ */

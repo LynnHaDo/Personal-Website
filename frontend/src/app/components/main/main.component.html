@@ -1,37 +1,42 @@
-<section class="main-section starter" id="about">
-  <div class="display">
-    <h1>Linh</h1>
-    <h1>Do</h1>
-    <span class = "bg-green">Full-stack development</span>
-    <span class = "bg-pink">Computer Vision</span>
-    <span class = "bg-green-mid">Machine Learning/AI</span>
-    <span class = "bg-green-light">Statistical Analysis</span>
-    <img
-      src="../../../assets/logo.png"
-      alt="Linh Do"
-      class="logo"
-      id="logo"
-    />
-  </div>
-  <div class="main-section-content">
-    <div class="intro">
-      <h1>Hi! I'm Linh</h1>
-      <p>
-        I am an aspiring software engineer, with interests in statistics and
-        AI/ML.
-      </p>
+<section class="main-section mb-2" id="about">
+  <div class="wrapper-border">
+    <div class="display">
+      <h1>Linh Do</h1>
+      <div class = "tag-wrapper">
+        <span class="bg-green">Full-stack Development</span>
+        <span class="bg-pink">Computer Vision</span>
+        <span class="bg-green-mid">Machine Learning/AI</span>
+        <span class="bg-green-light">Statistical Analysis</span>
+        <span class="bg-green">UI/UX Design</span>
+      </div>
+    </div>
+    <div class="main-section-content">
+        <p>
+            I am an aspiring software engineer, with interests in statistics and
+            AI/ML.
+        </p>
     </div>
   </div>
+  <div class = "nightDayToggle">
+    <div class = "inputGroup">
+        <input type="radio"  id = "dayToggle" name = "theme" (change)="handleNightDayClick($event)" />
+        <label for="dayToggle">Light</label>
+    </div>
+    <div class = "inputGroup">
+        <input type="radio"  id = "nightToggle" name = "theme" (change)="handleNightDayClick($event)" />
+        <label for="nightToggle">Dark</label>
+    </div>
+</div>
 </section>
 
-<section class="main-section bg-green" id="projects">
+<section class="main-section" id="projects">
   <div class="main-section-content">
     <h1>My projects</h1>
   </div>
-  <div class="row"></div>
+  <app-project-list></app-project-list>
 </section>
 
-<section class="main-section bg-black" id="contact">
+<section class="main-section" id="contact">
   <div class="main-section-content">
     <h1>Contact</h1>
     <div class="row">
@@ -52,6 +57,7 @@
           <a
             href="https://www.linkedin.com/in/linh-do-0327371b2/"
             target="_blank"
+            style="margin: 0 7px 0 10px"
           >
             <img
               src="../../../assets/icons/linkedin.svg"
@@ -69,7 +75,7 @@
         </div>
       </div>
     </div>
-    <br /><br /><br />
+    <br /><br />
     <p>
       Made with
       <img

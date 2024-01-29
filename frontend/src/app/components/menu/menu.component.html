@@ -1,13 +1,17 @@
 <header id = "header-wrapper">
+    <div class = "wrapper-border">
+        <img
+    src="../../../assets/logo.png"
+    alt="Linh Do"
+    class="logo"
+    id="logo"
+  />
     <div class = "connect">
-        <button id = "nightDayToggle" (click)="handleNightDayClick()">
-            <img *ngIf = "isDayToggle" src="../../../assets/icons/moon.svg">
-            <img *ngIf = "!isDayToggle" src="../../../assets/icons/sun.svg">
-        </button>
-        <a  href = "https://drive.google.com/file/d/10CqG6FMyzOzAVt5XWzdDu9MJFKH6nYOj/view?usp=sharing"
+        <a  class = "display" href = "https://drive.google.com/file/d/10CqG6FMyzOzAVt5XWzdDu9MJFKH6nYOj/view?usp=sharing"
             target="_blank">Resume</a>
-        <a  href = "https://github.com/LynnHaDo" 
+        <a  class = "display" href = "https://github.com/LynnHaDo" 
             target="_blank">Github</a>
+    </div>
     </div>
 </header>
 <div class="wrapper">
