@@ -1,0 +1,1 @@
+{"ast":null,"code":"export let Config = /*#__PURE__*/(() => {\n  class Config {\n    constructor() {\n      this.projectUrl = \"http://127.0.0.1:8000/getData/\";\n    }\n    static #_ = this.projectUrl = \"http://127.0.0.1:8000/getData/\";\n  }\n  return Config;\n})();","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
