@@ -1,4 +1,4 @@
 export class Config {
-    projectUrl = ""
-    static projectUrl = ""
+    projectUrl = "https://linh-do.vercel.app/api/view-projects"
+    static projectUrl = "https://linh-do.vercel.app/api/view-projects"
 }

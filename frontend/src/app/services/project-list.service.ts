@@ -2,17 +2,24 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Config } from "../environments/config";
 import { Project } from "../models/project";
-import { sql } from "@vercel/postgres";
+import { map } from "rxjs";
 
 @Injectable({
   providedIn: "root",
 })
 export class ProjectListService {
-  projects = sql`SELECT * from Projects`;
+    projects!: Project[];
   constructor(private httpClient: HttpClient) {}
 
   getProjects(){
-    return this.projects
+    return this.httpClient.get<GetResponseProjects>(Config.projectUrl).pipe(map(
+        response => response['projects']['rows']
+    ));
   }
+}
 
+interface GetResponseProjects {
+    "projects": {
+        "rows": Project[];
+    }
 }

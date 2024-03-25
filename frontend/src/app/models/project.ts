@@ -1,12 +1,11 @@
 export class Project {
-    id!: number;
+    id!: string;
     title!: string;
+    datecreated!: string;
+    datefinished!: string;
     description!: string;
-    imageUrl!: string;
-    githubUrl!: string;
-    languages!: string;
     frameworks!: string;
-    dateCreated!: Date;
-    dateFinished!: Date;
-    projectListId!: number;
+    githuburl!: string;
+    imageurl!: string;
+    languages!: string;
 }

@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { Project } from 'src/app/models/project';
 import { ProjectListService } from 'src/app/services/project-list.service';
 import { DOCUMENT } from "@angular/common";
+import { map } from "rxjs"
 
 @Component({
   selector: 'app-project-list',
@@ -9,12 +10,15 @@ import { DOCUMENT } from "@angular/common";
   styleUrls: ['./project-list.component.css']
 })
 export class ProjectListComponent implements OnInit {
-    projects!: any;
+    projects!: Project[];
 
     constructor(private projectListService: ProjectListService, @Inject(DOCUMENT) private document: Document){}
 
     ngOnInit(): void {
-        this.projects = this.projectListService.getProjects();
+        this.projectListService.getProjects().subscribe(data => {
+            this.projects = data;
+            console.log(data);
+        })
     }
 
     openProjectDescription(projectIndex: number){
