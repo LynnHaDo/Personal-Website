@@ -9,14 +9,12 @@ import { DOCUMENT } from "@angular/common";
   styleUrls: ['./project-list.component.css']
 })
 export class ProjectListComponent implements OnInit {
-    projects!: Project[];
+    projects!: any;
 
     constructor(private projectListService: ProjectListService, @Inject(DOCUMENT) private document: Document){}
 
     ngOnInit(): void {
-        this.projectListService.getProjects().subscribe(data => {
-            this.projects = data;
-        })
+        this.projects = this.projectListService.getProjects();
     }
 
     openProjectDescription(projectIndex: number){
