@@ -17,7 +17,7 @@ import environ
 env = environ.Env()
 environ.Env.read_env()
 
-DEVELOPMENT_MODE = env("DEVELOPMENT_MODE") == "True"
+#DEVELOPMENT_MODE = env("DEVELOPMENT_MODE") == "True"
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -104,7 +104,7 @@ REST_FRAMEWORK = {
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-if DEVELOPMENT_MODE is True:
+if True:
     DATABASES = {
         "default": {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -147,7 +147,7 @@ DATABASES["default"].update(dj_database_url.config(conn_max_age=500, ssl_require
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # Allow all host headers
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*", '.vercel.app']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
