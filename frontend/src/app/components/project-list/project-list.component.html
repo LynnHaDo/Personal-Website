@@ -8,7 +8,7 @@
         </div>
         <div class = "project-content-bg" id="background{{i}}"></div>
         <div class = "project-content" id="project{{i}}">
-            <span>{{ project.datecreated }} to {{ project.datefinished }}</span>
+            <span>{{ project.datecreated.split("T")[0] }} to {{ project.datefinished.split("T")[0] }}</span>
             <h3>{{ project.title }}</h3>
             <p>{{ project.description }}</p>
             <div class = "frameworks">
